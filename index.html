@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Best Food</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <header class="container my-3 bg-primary text-white p-4 text-center rounded">
+        <h2>Find Your Best Food</h2>
+    </header>
+
+    <main>
+        <section class="container my-2 text-center">
+            <input type="text" name="" id="search-field">
+            <button id="search-btn" class="btn btn-primary">Search</button>
+        </section>
+        <div id="loader" class="text-center d-none">
+            <button class="btn btn-primary" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Loading...
+            </button>
+        </div>
+        <div id="no-found-message" class="text-center d-none">
+            <h4>No Meals found, Please try anothe name.</h4>
+        </div>
+        <section class="container py-4">
+            <div id="meal-container" class="row row-cols-1 row-cols-md-3 g-4">
+
+            </div>
+
+            <section>
+                <!-- Modal -->
+                <div class="modal fade" id="meal-details-modal" tabindex="-1" aria-labelledby="meal-title" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="meal-title"></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <img class="w-50 m-auto card-img-top" id="modal-img" src="" alt="">
+                                <h4><b>Area:</b> <span id="modal-area"></span> </h4>
+                                <h4><b>Category:</b> <span id="modal-Category"></span> </h4>
+                                <h4><b>Tags:</b> <span id="modal-tags"></span> </h4>
+                                
+                            </div>
+                            <div class="modal-footer m-auto">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="show-all" class="text-center d-none py-3">
+                <button id="show-all-btn" class="btn btn-primary">Show All</button>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
